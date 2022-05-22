@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CADASTRO DE GENDA</title> <!--Titulo da Pagina-->
+</head>
+<body class="custom-control custom-switch">
+  <ul class="nav nav-tabs" role="tablist"> <!--Customização da tabela-->
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab">AGENDA DE CONTATOS</a>
+    </li>
+  </ul>
+<div class="tab-content">
+  <div id="agenda" class="container tab-pane active"><br><!--Fim da customização-->
+  <h3>RELAÇÃO DE CONTATOS DA AGENDA</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr> <!-- CABEÇALHO DA TABELA-->
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">NU</th>
+        <th scope="col">Curso</th>
+        <th scope="col">Data de Aniversário</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cadastro of lista_cadastros"> <!--Mostra o conteudo do arquivos cadastro.js dinamicamente-->
+        <td>{{cadastro.cod}}</td>
+        <td>{{cadastro.Nome }}</td>
+        <td>{{cadastro.RU}}</td>
+        <td>{{cadastro.Nome_do_curso}}</td>
+        <td>{{cadastro.dt_aniversario}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </body>
+</html>
